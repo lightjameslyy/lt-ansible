@@ -1,0 +1,11 @@
+# - name: "install vim"
+#   yum:
+#       name: vim
+#       state: installed
+
+- name: "copy file from macos"
+  copy: src=test-file.txt dest=/home/gpi2/test-file.txt owner=gpi2 group=acl mode=0644
+
+- name: "remove file from macos"
+  shell: removes=/home/gpi2/test-file.txt state=absent
+  notify: echo demo

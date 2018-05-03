@@ -1,0 +1,3 @@
+- name: echo demo
+  debug: msg="demo"
+

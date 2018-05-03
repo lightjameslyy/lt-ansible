@@ -1,0 +1,7 @@
+---
+- name: Ansible Demo 
+  hosts: all
+  remote_user: gpi2
+  become: true
+  roles:
+      - basic
