@@ -1,7 +1,8 @@
 ---
 - name: Ansible Demo 
-  hosts: all
+  hosts: staging
+  # hosts: production
   remote_user: gpi2
   become: true
   roles:
-      - basic
+      - source_zshrc

@@ -1,0 +1,11 @@
+- name: "print kafka path"
+  debug: msg="{{kafka_path}}"
+
+- name: "link kafka from nfs"
+  file: 
+    src: "{{kafka_path}}"
+    dest: /home/gpi2/app/kafka 
+    owner: gpi2
+    group: acl
+    state: link
+
